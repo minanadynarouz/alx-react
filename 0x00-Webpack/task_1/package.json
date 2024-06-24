@@ -19,7 +19,7 @@
     "webpack",
     "plugins"
   ],
-  "author": "Mina Narouz",
+  "author": "Joseph Mahiuha",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.50.0",
