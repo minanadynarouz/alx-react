@@ -14,6 +14,11 @@ module.exports = {
     maxAssetSize: 1000000,
   },
   Plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
