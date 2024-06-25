@@ -17,7 +17,7 @@
     "output",
     "webpack_plugings"
   ],
-  "author": "Joseph Mahiuha",
+  "author": "Mina Narouz",
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0-alpha.0",
