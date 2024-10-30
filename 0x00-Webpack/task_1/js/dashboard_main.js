@@ -1,5 +1,6 @@
-import $ from "jquery";
-import _, { update } from "lodash";
+const $ = require("jquery");
+// Load the full build
+const _ = require("lodash");
 
 /* 
   This block of code adds multiple elements to the body of the document:
@@ -22,6 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
   $('body').append("<p id='count'></p>");
   $('body').append("<p>Copyright - Holberton School</p>");
 
-  $("button").on('click', _.debounce(updateCounter, 300));
+  $("button").on('click', _.debounce(updateCounter, 500, { leading: true, trailing: false }));
 });
 
