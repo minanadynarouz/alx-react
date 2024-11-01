@@ -2,7 +2,7 @@
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/minanadynarouz/alx-react/tree/main/0x01-react_intro/task_3/dashboard/",
+  "homepage": "https://github.com/minanadynarouz/alx-react/tree/main/0x01-react_intro/task_3/dashboard",
   "type": "module",
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",

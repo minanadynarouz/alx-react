@@ -1,5 +1,5 @@
 import logo from './logo.jpg';
-import { getFullYear, getFooterCopy } from './utils';
+import { getFullYear, getFooterCopy } from './utils.js';
 import './App.css';
 
 export default function App() {
