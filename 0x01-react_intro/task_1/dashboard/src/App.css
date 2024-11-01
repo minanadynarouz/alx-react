@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --font-fam: "PT Serif", serif;
+}
+
+.App-header h1 {
+  color: rgb(237, 63, 63);
+  font-family: var(--font-fam);
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+}
+
+.App-header img {
+  width: 250px;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: rgb(237, 63, 63);
+  margin-inline: 10px;
+  font-family: var(--font-fam);
+}
+
+.App-body {
+  font-size: 1.2rem;
+  height: 50vh;
+  font-family: var(--font-fam);
+  display: flex;
+  justify-content: start;
+  position: relative;
+  left: 5%;
+}
+
+.App-footer {
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+}
