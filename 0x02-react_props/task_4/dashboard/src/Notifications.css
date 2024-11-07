@@ -1,0 +1,28 @@
+.Notifications {
+  border: 3px dashed rgb(237, 63, 63);
+  padding: 0 10px 10px 10px;
+  margin-inline: 2%;
+  position: absolute;
+  left: 51.5vw;
+  width: 40vw;
+}
+
+.Notifications p {
+  font-size: 1.3rem;
+}
+
+ul li[data-notification-type="default"] {
+  color: #2b41a1;
+  font-size: 1.2rem;
+}
+
+ul li[data-notification-type="urgent"] {
+  color: #e73b3b;
+  font-size: 1.2rem;
+}
+
+.menuItem {
+  margin-inline: 2%;
+  margin-bottom: 2%;
+  text-align: right;
+}

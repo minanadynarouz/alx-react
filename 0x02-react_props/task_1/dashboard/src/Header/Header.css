@@ -1,0 +1,20 @@
+.App-header h1 {
+  color: rgb(237, 63, 63);
+  font-family: var(--font-fam);
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+}
+
+.App-header img {
+  width: 250px;
+}
+
+.header_hr {
+  border: none;
+  height: 3px;
+  background-color: rgb(237, 63, 63);
+  margin-inline: 10px;
+}

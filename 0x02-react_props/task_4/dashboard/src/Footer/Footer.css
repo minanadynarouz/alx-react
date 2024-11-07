@@ -1,0 +1,13 @@
+.App-footer {
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: var(--font-fam);
+}
+
+.footer_hr {
+  border: none;
+  height: 3px;
+  background-color: rgb(237, 63, 63);
+  margin-inline: 10px;
+}
