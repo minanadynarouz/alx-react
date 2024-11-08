@@ -1,0 +1,28 @@
+.tableContainer {
+  width: 80vw;
+  height: 50vh;
+  border-collapse: collapse;
+  font-family: var(--font-fam);
+  display: flex;
+  justify-content: center;
+  margin: 2% auto;
+}
+
+#CourseList {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-fam);
+  margin-top: 10px;
+}
+
+#CourseList th,
+#CourseList td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#CourseList th {
+  background-color: #fff;
+}
