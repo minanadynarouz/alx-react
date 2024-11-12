@@ -1,42 +1,39 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import "@testing-library/jest-dom";
-import CourseListRow from './CourseListRow';
+import React from "react";
+import { shallow } from 'enzyme';
+import CourseListRow from "./CourseListRow";
 
-describe('CourseListRow', () => {
-  test('renders one cell with colspan = 2 when isHeader is true and textSecondCell does not exist', () => {
-    render(<CourseListRow isHeader={true} textFirstCell="Course Title" />);
-
-    const cell = screen.getByRole('columnheader', { name: /course title/i });
-    expect(cell).toBeInTheDocument();
-    expect(cell).toHaveAttribute('colspan', '2');
+describe('Basic React Tests - <CourseListRow />', function () {
+  it('Should render without crashing', () => {
+    const wrapper = shallow(<CourseListRow textFirstCell='start' />);
+    expect(wrapper.exists()).toBeTruthy();
   });
 
-  test('renders two cells when isHeader is true and textSecondCell is present', () => {
-    render(<CourseListRow isHeader={true} textFirstCell="Course Title" textSecondCell="Credits" />);
-
-    const firstCell = screen.getByRole('columnheader', { name: /course title/i });
-    const secondCell = screen.getByRole('columnheader', { name: /credits/i });
-
-    expect(firstCell).toBeInTheDocument();
-    expect(secondCell).toBeInTheDocument();
-    expect(firstCell).not.toHaveAttribute('colspan'); // Ensure it doesn't have colspan
-    expect(secondCell).not.toHaveAttribute('colspan'); // Ensure second cell doesn't have colspan
+  it('When isHeader is true - Should render one cell with colspan = 2 when textSecondCell does not exist', function () {
+    const wrapper = shallow(<CourseListRow isHeader={true} textFirstCell='start' />);
+    expect(wrapper.find('th').prop('colSpan')).toEqual('2');
   });
 
-  test('renders two td elements within a tr element when isHeader is false', () => {
-    render(<CourseListRow isHeader={false} textFirstCell="Course Title" textSecondCell="Credits" />);
+  it('When isHeader is true - Should render two cells when textSecondCell is present', function () {
+    const wrapper = shallow
+      (
+        <CourseListRow
+          isHeader={true}
+          textFirstCell='start'
+          textSecondCell='build'
+        />
+      );
+    expect(wrapper.find('th')).toHaveLength(2);
+  });
 
-    const firstCell = screen.getByRole('columnheader', { name: /course title/i });
-    const secondCell = screen.getByRole('columnheader', { name: /credits/i });
-
-    expect(firstCell).toBeInTheDocument();
-    expect(secondCell).toBeInTheDocument();
-
-    // Check that both cells are within a table row
-    const row = firstCell.closest('tr'); // Get the closest tr element
-    expect(row).toBeInTheDocument(); // Ensure the row is present
-    expect(row).toContainElement(firstCell); // Ensure the first cell is in the row
-    expect(row).toContainElement(secondCell); // Ensure the second cell is in the row
+  it('When isHeader is false - Should render correctly two td elements within a tr element', function () {
+    const wrapper = shallow
+      (
+        <CourseListRow
+          isHeader={false}
+          textFirstCell='Txt1'
+          textSecondCell='Txt2'
+        />
+      );
+    expect(wrapper.find('tr').children('td')).toHaveLength(2);
   });
 });
