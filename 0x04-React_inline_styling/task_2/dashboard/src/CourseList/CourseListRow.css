@@ -1,7 +1,0 @@
-th[colspan="2"] {
-  text-align: center;
-}
-
-th:not([colspan]) {
-  text-align: left;
-}
